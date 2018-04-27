@@ -1,0 +1,18 @@
+// append pseudo element to then clear float
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// will be .row::after
+
+@mixin colfloat{
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: $space-horizontal;
+  }
+}
