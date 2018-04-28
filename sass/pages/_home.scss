@@ -2,3 +2,26 @@
   background-color: $color-grey-light-1;
   padding: 7rem;
 }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+    to top right, 
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)), 
+    url('../img/section-street.jpg');
+    background-size: cover;
+    background-position: center top;
+    margin-top: -3rem;
+
+    transform: skewY(-3deg);
+
+    & > * {
+      transform: skewY(3deg);
+    }
+  }
+// directive child selector
+// & > * universal selector all children
+// but only the direct children
+// Photo by Jake Blucker on Unsplash
+

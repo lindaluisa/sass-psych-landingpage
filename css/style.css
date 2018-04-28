@@ -181,6 +181,54 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 20%;
+      top: 22rem; }
+    .composition__photo--p2 {
+      left: 35%;
+      top: 8rem; }
+    .composition__photo--p3 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #841a4d;
+      transform: scale(1.05) translateY(-1rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 5rem;
+    margin-bottom: .3rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #c4367a, #561333);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: center; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+  .feature-box__text {
+    margin-bottom: 2rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -255,3 +303,13 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 7rem; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to top right, rgba(196, 54, 122, 0.8), rgba(86, 19, 51, 0.8)), url("../img/section-street.jpg");
+  background-size: cover;
+  background-position: center top;
+  margin-top: -3rem;
+  transform: skewY(-3deg); }
+  .section-features > * {
+    transform: skewY(3deg); }
